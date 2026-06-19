@@ -1,0 +1,107 @@
+.browser-mockup {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  height: 100%;
+  min-height: 550px;
+  background: #0d121f;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #151d30;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 80px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.red { background-color: #ef4444; }
+.dot.yellow { background-color: #f59e0b; }
+.dot.green { background-color: #10b981; }
+
+.browser-address {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-sm);
+  padding: 4px 16px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 400px;
+  width: 100%;
+  justify-content: center;
+  font-family: var(--font-mono);
+}
+
+.lock-icon {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.address-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browser-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 80px;
+}
+
+.action-btn {
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.action-btn:hover {
+  opacity: 1;
+}
+
+.iframe-container {
+  flex-grow: 1;
+  background: #fff; /* standard page background fallback */
+  position: relative;
+  height: calc(100% - 40px);
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff; /* standard default in case of loading issues */
+  display: block;
+}
+
+.preview-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem;
+}
